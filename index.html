@@ -405,11 +405,76 @@
             color: #5a4a42;
         }
 
-        .my-class {
-            background-color: white;
-            border-radius: 50px;
-            height: 100px;
-            
+        .elegant-date {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            /* font-family: 'Playfair Display', serif; */
+            /* color: #5a4a42; */
+            margin: 20px 0;
+        }
+
+        .date-day {
+            font-size: 3.5rem;
+            line-height: 1;
+            margin-right: 10px;
+        }
+
+        .date-month-year {
+            display: flex;
+            flex-direction: column;
+            font-size: 1.2rem;
+            line-height: 1.3;
+        }
+
+        .time-separator {
+            margin: 0 15px;
+            font-size: 1.5rem;
+        }
+
+        .time-hour {
+            font-size: 2.5rem;
+            letter-spacing: 2px;
+            position: relative;
+            padding-left: 15px;
+        }
+
+        .time-hour::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 50%;
+            height: 60%;
+            width: 2px;
+            background: #e8c4c4;
+            transform: translateY(-50%);
+        }
+
+        .hero h1 {
+            text-shadow:
+                0 2px 4px rgba(0, 0, 0, 0.5),
+                0 0 10px rgba(255, 255, 255, 0.3);
+            color: white;
+            position: relative;
+            display: inline-block;
+        }
+
+        .hero h1::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: -10px;
+            height: 2px;
+            background: linear-gradient(to right, transparent, #e8c4c4, transparent);
+        }
+
+        .hero div {
+            text-shadow:
+                0 2px 4px rgba(0, 0, 0, 0.5),
+                0 0 10px rgba(255, 255, 255, 0.3);
+            color: white;
+            position: relative;
         }
     </style>
 </head>
@@ -417,9 +482,18 @@
 <body>
     <!-- Герой-секция -->
     <section class="hero section">
-        <div class="hero-content">
+        <div class="hero-content ">
             <h1>Алексей & Мария</h1>
-            <div class="date">1 августа 2025 года · Город Энгельс</div>
+            <!-- <div class="date">1 августа 2025 года · Город Энгельс</div> -->
+            <div class="elegant-date">
+                <div class="date-day">01</div>
+                <div class="date-month-year">
+                    <span class="month">августа</span>
+                    <span class="year">2025</span>
+                </div>
+                <div class="time-separator">в</div>
+                <div class="time-hour">16:00</div>
+            </div>
         </div>
     </section>
 
@@ -444,8 +518,9 @@
         <div class="personal-message">
             <h2 class="guest-name">Дорогая Анна</h2>
             <div class="personal-text">
-                <p>Мы особенно хотим подчеркнуть, как важна для нас твоя поддержка в этот особенный день.</p>
+                <p>С радостью объявляем о нашей свадьбе! Очень хотим видеть тебя в этот особенный день.</p>
                 <p>Твоё присутствие сделает наш праздник ещё более тёплым и радостным!</p>
+                <p>Своё присутствие можно подтвердить ответным сообщением отправителю.</p>
                 <p>Мы очень-очень ждём тебя <span class="heart">♥</span></p>
             </div>
         </div>
@@ -457,13 +532,13 @@
 
             <div class="detail-item">
                 <h2 class="detail-title">Дата и время</h2>
-                <p >1 августа 2025 года в 16:00</p>
+                <p>1 августа 2025 года в 16:00</p>
                 <!-- <p class="time">Сбор гостей</p> -->
             </div>
 
             <div class="detail-item">
                 <h2 class="detail-title">Место проведения</h2>
-                <div >
+                <div>
                     <p class="venue-name">Банкетный зал "Эдем"</p>
                     <p class="address">г. Энгельс, ул. Нестерова, 98</p>
                 </div>
@@ -472,7 +547,7 @@
 
             <div class="detail-item">
                 <h2 class="detail-title">Дресс-код</h2>
-                <p >Мы будем рады видеть вас в элегантных вечерних нарядах</p>
+                <p>Мы будем рады видеть вас в элегантных вечерних нарядах</p>
             </div>
         </div>
     </section>

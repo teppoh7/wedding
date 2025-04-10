@@ -357,16 +357,6 @@
             }
         }
 
-        .details {
-            padding: 60px 20px;
-            text-align: center;
-            background-color: #faf6f2;
-        }
-
-        .details-container {
-            max-width: 600px;
-            margin: 0 auto;
-        }
 
         .detail-item {
             margin-bottom: 30px;
@@ -476,6 +466,72 @@
             color: white;
             position: relative;
         }
+
+        /* Общие стили */
+        .details {
+            padding: 60px 20px;
+            background: #faf6f2;
+            text-align: center;
+        }
+
+        .details-container {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Блоки с деталями */
+        .detail-block {
+            margin: 25px 0;
+        }
+
+        .detail-content {
+            display: inline-block;
+            text-align: center;
+        }
+
+        .detail-title {
+            /* font-family: 'Playfair Display', serif; */
+            font-size: 2.5rem;
+            color: #8c7b75;
+            margin-bottom: 10px;
+            font-weight: 400;
+        }
+
+        .highlight-time {
+            color: #b2929b;
+            font-weight: 500;
+        }
+
+        .venue-name {
+            font-weight: 500;
+        }
+
+        .venue-address {
+            font-style: normal;
+            color: #8c7b75;
+        }
+
+        .dress-code-note {
+            font-size: 0.9rem;
+            color: #8c7b75;
+            margin-top: 5px;
+        }
+
+        .gifts-preference {
+            /* font-family: 'Playfair Display', serif; */
+            color: #856c73;
+            margin-top: 10px;
+            font-style: italic;
+        }
+
+        /* Разделитель */
+        .divider {
+            height: 1px;
+            width: 200px;
+            background: #7a7373;
+            margin: 10px auto;
+            opacity: 0.5;
+        }
     </style>
 </head>
 
@@ -526,33 +582,47 @@
         </div>
     </section>
 
-    <!-- Детали мероприятия -->
+    <!-- Секция с деталями мероприятия -->
     <section class="details section">
         <div class="details-container">
-
-            <div class="detail-item">
-                <h2 class="detail-title">Дата и время</h2>
-                <p>1 августа 2025 года в 16:00</p>
-                <!-- <p class="time">Сбор гостей</p> -->
-            </div>
-
-            <div class="detail-item">
-                <h2 class="detail-title">Место проведения</h2>
-                <div>
-                    <p class="venue-name">Банкетный зал "Эдем"</p>
-                    <p class="address">г. Энгельс, ул. Нестерова, 98</p>
+            <div class="detail-block">
+                <div class="detail-content">
+                    <h2 class="detail-title">Дата и время</h3>
+                    <p>1 августа 2025 года в 16:00</p>
+                    <!-- <p class="highlight-time"> — Сбор гостей</p> -->
                 </div>
-
             </div>
 
-            <div class="detail-item">
-                <h2 class="detail-title">Дресс-код</h2>
-                <p>Мы будем рады видеть вас в элегантных вечерних нарядах</p>
+            <div class="divider"></div>
+
+            <div class="detail-block">
+                <div class="detail-content">
+                    <h2 class="detail-title">Место проведения</h3>
+                    <p class="venue-name">Банкетный зал "Эдем"</p>
+                    <p class="venue-address">г. Энгельс, ул. Нестерова, 98</p>
+                </div>
+            </div>
+
+            <div class="divider"></div>
+
+            <div class="detail-block">
+                <div class="detail-content">
+                    <h2 class="detail-title">Дресс-код</h3>
+                    <p>Официальный, в пастельных тонах</p>
+                </div>
+            </div>
+
+            <div class="divider"></div>
+
+            <div class="detail-block">
+                <div class="detail-content">
+                    <h2 class="detail-title">Подарки</h3>
+                    <p>Ваше присутствие — самый важный для нас подарок.</p>
+                    <p class="gifts-preference">Будем рады бутылке хорошего вина или подарку в денежном эквиваленте.</p>
+                </div>
             </div>
         </div>
     </section>
-
-
 
     <section class="countdown section">
         <h2 class="countdown-title">До нашего праздника осталось:</h2>

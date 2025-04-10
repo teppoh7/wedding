@@ -70,7 +70,7 @@
             text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
         }
 
-        .btn {
+        /* .btn {
             background-color: rgba(232, 196, 196, 0.9);
             color: #5a4a42;
             border: none;
@@ -88,7 +88,7 @@
             background-color: rgba(216, 180, 180, 0.9);
             transform: translateY(-2px);
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
-        }
+        } */
 
         /* Остальные стили остаются без изменений */
         .invitation {
@@ -103,16 +103,6 @@
             font-size: 1.1rem;
         }
 
-        .details {
-            padding: 60px 20px;
-            text-align: center;
-            background-color: white;
-        }
-
-        .details-container {
-            max-width: 600px;
-            margin: 0 auto;
-        }
 
         h2 {
             /* font-family: 'Playfair Display', serif; */
@@ -123,22 +113,15 @@
             font-weight: 400;
         }
 
-        .detail-item {
-            margin-bottom: 20px;
-        }
-
-        .detail-title {
-            font-weight: 600;
-            margin-bottom: 5px;
-        }
 
         .map {
-            height: 500px; /* Чуть больше для лучшего обзора */
+            height: 500px;
+            /* Чуть больше для лучшего обзора */
             padding: 40px 0;
             background-color: #faf6f2;
             position: relative;
         }
-        
+
         .map-container {
             width: 90%;
             max-width: 800px;
@@ -147,13 +130,13 @@
             border-radius: 8px;
             overflow: hidden;
         }
-        
+
         #yandex-map {
             width: 100%;
             height: 80%;
             border: none;
         }
-        
+
         .map-title {
             text-align: center;
             margin-bottom: 20px;
@@ -161,7 +144,8 @@
             font-size: 2rem;
             color: #8c7b75;
         }
-/* 
+
+        /* 
         iframe {
             width: 100%;
             height: 100%;
@@ -372,6 +356,61 @@
                 font-size: 2rem;
             }
         }
+
+        .details {
+            padding: 60px 20px;
+            text-align: center;
+            background-color: #faf6f2;
+        }
+
+        .details-container {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .detail-item {
+            margin-bottom: 30px;
+            font-size: 1em;
+
+        }
+
+        .detail-title {
+            /* font-family: 'Playfair Display', serif; */
+            /* font-size: 1.5rem; */
+            color: #8c7b75;
+            margin-bottom: 10px;
+            letter-spacing: 1px;
+            font-size: 2.5em;
+
+        }
+
+        .time {
+            /* font-size: 1.2rem; */
+            color: #b2929b;
+            margin-top: 5px;
+        }
+
+        .venue-name {
+            /* font-weight: 600; */
+            color: #5a4a42;
+        }
+
+        .address {
+            /* font-style: italic; */
+            color: #8c7b75;
+        }
+
+        .dress-code {
+            line-height: 1.6;
+            color: #5a4a42;
+        }
+
+        .my-class {
+            background-color: white;
+            border-radius: 50px;
+            height: 100px;
+            
+        }
     </style>
 </head>
 
@@ -415,29 +454,26 @@
     <!-- Детали мероприятия -->
     <section class="details section">
         <div class="details-container">
-            <h2>Детали мероприятия</h2>
 
-            <div class="personal-text">
-                <p>Мы особенно хотим подчеркнуть, как важна для нас твоя поддержка в этот особенный день.</p>
-                <p>Твоё присутствие сделает наш праздник ещё более тёплым и радостным!</p>
-                <p>Мы очень-очень ждём тебя <span class="heart">♥</span></p>
-            </div>
-            <!-- <div class="detail-item">
-                <div class="detail-title">Дата и время</div>
-                <p>1 августа 2025 года</p>
-                <p>Начало в 15:00</p>
+            <div class="detail-item">
+                <h2 class="detail-title">Дата и время</h2>
+                <p >1 августа 2025 года в 16:00</p>
+                <!-- <p class="time">Сбор гостей</p> -->
             </div>
 
             <div class="detail-item">
-                <div class="detail-title">Место проведения</div>
-                <p>Ресторан "Волжские зори"</p>
-                <p>г. Энгельс, набережная Космонавтов, 12</p>
+                <h2 class="detail-title">Место проведения</h2>
+                <div >
+                    <p class="venue-name">Банкетный зал "Эдем"</p>
+                    <p class="address">г. Энгельс, ул. Нестерова, 98</p>
+                </div>
+
             </div>
 
             <div class="detail-item">
-                <div class="detail-title">Дресс-код</div>
-                <p>Пастельные тона или элегантный кэжуал</p>
-            </div> -->
+                <h2 class="detail-title">Дресс-код</h2>
+                <p >Мы будем рады видеть вас в элегантных вечерних нарядах</p>
+            </div>
         </div>
     </section>
 
@@ -466,13 +502,13 @@
     </section>
 
 
-        <!-- Интерактивная карта -->
-        <section class="map section">
-            <h2 class="map-title">Банкетный зал "Эдем"</h2>
-            <div class="map-container">
-                <div id="yandex-map"></div>
-            </div>
-        </section>
+    <!-- Интерактивная карта -->
+    <section class="map section">
+        <h2 class="map-title">Банкетный зал "Эдем"</h2>
+        <div class="map-container">
+            <div id="yandex-map"></div>
+        </div>
+    </section>
 
     <script>
         // Анимация при скролле
@@ -522,7 +558,8 @@
         // (Остальной JavaScript для анимаций остаётся без изменений)
     </script>
 
-    <script src="https://api-maps.yandex.ru/2.1/?apikey=08ae621f-658f-4f27-952a-dae95f8b8ab3&lang=ru_RU" type="text/javascript"></script>
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=08ae621f-658f-4f27-952a-dae95f8b8ab3&lang=ru_RU"
+        type="text/javascript"></script>
 
     <script>
         // Инициализация Яндекс.Карты

@@ -10,6 +10,7 @@
 *.userosscache
 *.sln.docstates
 
+orig.html
 mapping.txt
 
 # User-specific files (MonoDevelop/Xamarin Studio)

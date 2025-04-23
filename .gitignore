@@ -12,6 +12,7 @@
 
 orig.html
 mapping.txt
+tmp.txt
 
 # User-specific files (MonoDevelop/Xamarin Studio)
 *.userprefs
